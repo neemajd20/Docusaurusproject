@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'AFYA MSAFIRI USER GUIDE ',
+  tagline: 'ELECTRONIC SCREENING OF TRAVELERS AND PUBLIC HEALTH EVENTS AT POINTS OF ENTRY ',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -15,7 +15,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'neemajd20', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -58,9 +58,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Afya Msafiri User Guide',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Afya Msafiri Logo',
         src: 'img/logo.svg',
       },
       items: [
