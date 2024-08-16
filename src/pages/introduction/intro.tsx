@@ -1,34 +1,50 @@
- import clsx from 'clsx';
+import React from 'react';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import styles from './index.module.css';
 
-function HomepageHeader() {
- return ( 
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-        <h1 className="hero__title">Afya Msafiri User Guide</h1>
-        <p className="hero__subtitle">Electronic Screening of Travelers and Public Health Events at Points of Entry</p>
-      </div>
-      </header>
- );
-  }
-
-  export default function Home(): JSX.Element {
-    return   (
+const Home: React.FC = () => {
+  return (
     <Layout
-    title="Afya Msafiri User Guide"
-    description="User Guide for Electronic Screening of Travelers and Public Health Events at Points of Entry">
-    <HomepageHeader />
-    <main>
+      title="USER GUIDE FOR ELECTRONIC SCREENING"
+      description="User Guide for Electronic Screening of Travelers and Public Health Events at Points of Entry - AFYAMSAFIRI"
+    >
+      <header className={styles.heroBanner}>
         <div className="container">
-            <p>
-            Welcome to the Afya Msafiri User Guide! This documentation provides guidance on the electronic screening system for travelers and public health events at points of entry in Tanzania.
-          </p>  
+          <h1 className="hero__title">
+            THE UNITED REPUBLIC OF TANZANIA
+          </h1>
+          <p className="hero__subtitle">
+            MINISTRY OF HEALTH
+          </p>
+          <p className={styles.guideTitle}>
+            USER GUIDE FOR ELECTRONIC SCREENING OF TRAVELERS AND PUBLIC HEALTH EVENTS AT POINTS OF ENTRY
+          </p>
+          <p className={styles.guideSubtitle}>
+            AFYAMSAFIRI
+          </p>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/intro"
+            >
+              Get Started
+            </Link>
           </div>
-    </main>
+          <p className={styles.preparedBy}>
+            Prepared by:<br />
+            Department of Preventive Services<br />
+            Environmental Health and Sanitation
+          </p>
+        </div>
+      </header>
+      <main>
+        {/* Additional content sections can go here */}
+      </main>
     </Layout>
-    );
-    
-     }
- 
+  );
+};
+
+export default Home;
+
  
