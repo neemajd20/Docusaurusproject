@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import styles from './index.module.css';
+import styles from './intro.module.css';
 
-const Home: React.FC = () => {
+function HomepageHeader() {
   return (
     <Layout
       title="USER GUIDE FOR ELECTRONIC SCREENING"
@@ -45,6 +45,5 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
 
  
