@@ -1,6 +1,9 @@
 ---
-title:Introduction to Afya Msafiri
+title: AFYAMSAFIRI
 ---
+  
+## USER GUIDE FOR ELECTRONIC SCREENING OF TRAVELERS AND PUBLIC HEALTH EVENTS AT POINTS OF ENTRY 
+
 
 
 
