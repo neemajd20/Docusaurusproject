@@ -11,23 +11,14 @@ function HomepageHeader() {
     >
       <header className={styles.heroBanner}>
         <div className="container">
-          <h1 className="hero__title">
-            THE UNITED REPUBLIC OF TANZANIA
-          </h1>
-          <p className="hero__subtitle">
-            MINISTRY OF HEALTH
-          </p>
+          <h1 className="hero__title">THE UNITED REPUBLIC OF TANZANIA</h1>
+          <p className="hero__subtitle">MINISTRY OF HEALTH</p>
           <p className={styles.guideTitle}>
             USER GUIDE FOR ELECTRONIC SCREENING OF TRAVELERS AND PUBLIC HEALTH EVENTS AT POINTS OF ENTRY
           </p>
-          <p className={styles.guideSubtitle}>
-            AFYAMSAFIRI
-          </p>
+          <p className={styles.guideSubtitle}>AFYAMSAFIRI</p>
           <div className={styles.buttons}>
-            <Link
-              className="button button--primary button--lg"
-              to="/docs/intro"
-            >
+            <Link className="button button--primary button--lg" to="/docs/intro">
               Get Started
             </Link>
           </div>
@@ -43,7 +34,6 @@ function HomepageHeader() {
       </main>
     </Layout>
   );
-};
+}
 
-
- 
+export default HomepageHeader;
