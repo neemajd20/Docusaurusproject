@@ -22,18 +22,18 @@ const sidebars: SidebarsConfig = {
           label: 'Afya Msafiri for Travelers',
           items: [
             'Afya Msafiri for-travelers/3.1 Accessing the afyamsafiri application',
-            'Afya Msafiri for-travelers/3.2 Filling Travelers Surveillance Arrival Form',
+            'Afya Msafiri for-travelers/3.2 Filling Travelers Surveillance arrival Form',
             'Afya Msafiri for-travelers/3.3 Filling Travelers Surveillance Departure Form',
             'Afya Msafiri for-travelers/3.4 Booking for Yellow Fever Vaccination',
-            'Afya Msafiri for-travelers/3.5 Request for Card Replacement',
+            'Afya Msafiri for-travelers/3.5 Request for card replacement',
           ],
         },
         {
           type: 'category',
           label: 'System Requirement and Components',
           items: [
-            'System Requirement and Components/2.1 System Access Requirement',
-            'System Requirement and Components/2.2 System Components',
+            'System Requirement and Components/2.1 System access Requirement',
+            'System Requirement and Components/2.2 System components',
           ],
         },
         {
