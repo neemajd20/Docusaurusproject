@@ -10,7 +10,7 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
-          label: 'Afya Msafiri for Manager',
+          label: 'Afya Msafiri for-manager',
           items: [
             'Afya Msafiri for-manager/4.1 Accessing afyamsafiri application',
             'Afya Msafiri for-manager/4.2 Travelers Screening',
@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: 'Afya Msafiri for Travelers',
+          label: 'Afya Msafiri for-travelers',
           items: [
             'Afya Msafiri for-travelers/3.1 Accessing the afyamsafiri application',
             'Afya Msafiri for-travelers/3.2 Filling Travelers Surveillance arrival Form',
