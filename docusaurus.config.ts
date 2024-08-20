@@ -1,4 +1,7 @@
-import type { DocusaurusConfig } from '@docusaurus/types';
+import { themes as prismThemes} from 'prism-react-renderer';
+import type { DefaultParseFrontMatter, DocusaurusConfig } from '@docusaurus/types';
+import type * as Present from '@docusaurus/preset-classic' ;
+import { ParseFrontMatterParams, ParseFrontMatterResult } from '@docusaurus/types/src/config';
 
 const config: DocusaurusConfig = {
   title: 'AFYA MSAFIRI Documentation',
@@ -18,8 +21,8 @@ const config: DocusaurusConfig = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: 'docs/intro', label: 'Documentation', position: 'left'},
-        {to: 'docs/intro', label: 'Getting Started', position: 'left'},
+        { to: 'docs/intro', label: 'Documentation', position: 'left' },
+        { to: 'docs/intro', label: 'Getting Started', position: 'left' },
         {
           href: 'https://github.com/your-org/afya-msaafiri',
           label: 'GitHub',
@@ -88,15 +91,51 @@ const config: DocusaurusConfig = {
       },
     ],
   ],
-  trailingSlash: false, // New property
+  trailingSlash: false,
   i18n: {
     defaultLocale: 'en',
+    path: '',
     locales: ['en'],
+    localeConfigs: {}
   },
   future: {
-    disableLegacyBundler: true,
+    experimental_storage: {
+      type: 'localStorage',
+      namespace: ''
+    },
+    experimental_router: 'browser'
   },
   noIndex: false,
+  onBrokenAnchors: 'throw',
+  onDuplicateRoutes: 'throw',
+  plugins: [],
+  themes: [],
+  staticDirectories: [],
+  headTags: [],
+  scripts: [],
+  stylesheets: [],
+  clientModules: [],
+  titleDelimiter: '',
+  baseUrlIssueBanner: false,
+  markdown: {
+    format: 'mdx',
+    parseFrontMatter: function (params: ParseFrontMatterParams & { defaultParseFrontMatter: DefaultParseFrontMatter; }): Promise<ParseFrontMatterResult> {
+      throw new Error('Function not implemented.');
+    },
+    mermaid: false,
+    preprocessor: function (args: { filePath: string; fileContent: string; }): string {
+      throw new Error('Function not implemented.');
+    },
+    mdx1Compat: {
+      comments: false,
+      admonitions: false,
+      headingIds: false
+    },
+    remarkRehypeOptions: undefined,
+    anchors: {
+      maintainCase: false
+    }
+  }
 };
 
 export default config;
