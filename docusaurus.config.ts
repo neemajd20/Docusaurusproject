@@ -1,67 +1,102 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import type { DocusaurusConfig } from '@docusaurus/types';
 
-const config: Config = {
-  title: 'AFYA MSAFIRI USER GUIDE',
-  tagline: 'ELECTRONIC SCREENING OF TRAVELERS AND PUBLIC HEALTH EVENTS AT POINTS OF ENTRY',
-  favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+const config: DocusaurusConfig = {
+  title: 'AFYA MSAFIRI Documentation',
+  tagline: 'Electronic Screening of Travelers and Public Health Events',
+  url: 'https://your-site-url.com', // Replace with your site URL
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'neemajd20', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  favicon: 'img/favicon.ico',
+  organizationName: 'your-org', // Your GitHub org/user name
+  projectName: 'afya-msaafiri', // Your repo name
+  themeConfig: {
+    navbar: {
+      title: 'AFYA MSAFIRI',
+      logo: {
+        alt: 'AFYA MSAFIRI Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {to: 'docs/intro', label: 'Documentation', position: 'left'},
+        {to: 'docs/intro', label: 'Getting Started', position: 'left'},
+        {
+          href: 'https://github.com/your-org/afya-msaafiri',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Introduction',
+              to: 'docs/intro',
+            },
+            {
+              label: 'System Requirements',
+              to: 'docs/system-requirements',
+            },
+            {
+              label: 'For Travelers',
+              to: 'docs/afya-msaafiri/travelers',
+            },
+            {
+              label: 'For Managers',
+              to: 'docs/afya-msaafiri/managers',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/your-org/afya-msaafiri',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/your-org',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Your Organization. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: require('prism-react-renderer/themes/dracula'),
+    },
+  },
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          sidebarPath: require.resolve('./sidebars.ts'),
+          editUrl: 'https://github.com/your-org/afya-msaafiri/edit/main/',
+        },
+        blog: {
+          showReadingTime: true,
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+  trailingSlash: false, // New property
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.ts'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      } satisfies Preset.Options,
-    ],
-  ],
-
-  themeConfig: {
-    // Replace with your project's social card
-    image: 'static/img/Picture0.png',
-    navbar: {
-      title: 'Ministry of Health - Tanzania',
-      logo: {
-        alt: 'Tanzania Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        { to: '/', label: 'Home', position: 'left' },
-        { to: '/docs/intro', label: 'User Guide', position: 'left' },
-      ],
-    },
+  future: {
+    disableLegacyBundler: true,
   },
+  noIndex: false,
 };
 
 export default config;
