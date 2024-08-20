@@ -1,4 +1,4 @@
-import { themes as prismThemes} from 'prism-react-renderer';
+
 import type { DefaultParseFrontMatter, DocusaurusConfig } from '@docusaurus/types';
 import type * as Present from '@docusaurus/preset-classic' ;
 import { ParseFrontMatterParams, ParseFrontMatterResult } from '@docusaurus/types/src/config';
